@@ -2,6 +2,39 @@
 // Author: Robin Hooda
 // copyrights reserved
 
+const array = [
+    {   city:'Bangalore',
+        state:'Karnataka',
+        degree :26,
+        weather:'Partly Cloudy ☁️'},
+    {   city:'Chennai',
+        state:'TamilNadu',
+        degree :34,
+        weather:'Sunny ☀️'},
+    {   city:'Coimbatore',
+        state:'TamilNadu',
+        degree :26,
+        weather:'Rainy ⛈️'},
+    {   city:'Patna',
+        state:'Bihar',
+        degree :23,
+        weather:'Cloudy ☁️' },
+    {   city:'Gurugram',
+        state:'Haryana',
+        degree :34,
+        weather:'Sunny ☀️'},
+    {   city:'Mumbai',
+        state:'Maharashtra',
+        degree :20,
+        weather:'Rainy ⛈️'},
+    {   city:'Jaipur',
+        state:'Rajasthan',
+        degree :32,
+        weather:'Sunny ☀️'}
+    
+    
+];
+
 function dateTime(){
     var welcome;
 	var date = new Date();
