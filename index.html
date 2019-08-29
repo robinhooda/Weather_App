@@ -20,15 +20,27 @@
                   <h1 class="center">Weather App</h1> 
                </div>
         </div>
-           <!--For right side part of webpage-->
-        <div class="right">
-                Bangalore
-               <div onchange="dateTime()">
-              <!-- ? <h2><span id="demo "></span></h2> -->
-              <p id="demo">Time</p>
-               </div>
-                
-                    <h2 class="center">Enter your city</h2>
+         
+                    <h2 class="center">Enter your city</h2> -->
+              <div class="right">
+                  <div class="cityName">Bangalore, Karnataka</div>
+                  <div class="details">
+                        <div class="date">Wednesday 1:00 pm</div>
+                        <div class="condition">Partly Cloudy ☁️ </div>
+                  </div>
+                  <div class="report">
+                      <div><b class="degree">26</b></div> <span>
+                          <span class="celsius" onclick="changeToCelsius()">&#8451;</span> 
+                          <span class="or">|</span> 
+                          <span class="farenheit" onclick="changeToFarenheit()"> &#8457;
+                          </span></span>
+                    </div>
+                <div class="inputDetails">
+                    <div class="placeholder">Enter city name</div>
+                    <div class="input">
+                        <input id="in" type="text" name="city" placeholder="City name" 
+                        list="datalist">
+                        <datalist id="datalist">
                      <input type = "text" list = "myCity" name="myCity" placeholder="City,State"> 
                          <datalist id = "myCity">
                         <option value = "Bangalore">
