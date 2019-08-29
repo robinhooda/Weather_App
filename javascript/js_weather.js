@@ -9,8 +9,10 @@ function dateTime(){
     var minute = date.getMinutes();
     var second = date.getSeconds();
 	var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday", "Friday","Saturday");
-    document.getElementById("demo").innerHTML=weekday[date.getDate()];
-    // document.getElementById("demo1").innerHTML=(","+ hour +":" + minute+ ":" +second);
+      let conCat=   weekday[date.getDate()]+", "(","+ hour +":" + minute+ ":" +second);
+    // document.getElementById("demo").innerHTML=weekday[date.getDate()];
+    // document.getElementById("demo").innerHTML=(","+ hour +":" + minute+ ":" +second);
+alert(date.getSeconds());
 }
  window.onload=dateTime();
 
