@@ -2,7 +2,7 @@
 // Author: Robin Hooda
 // copyrights reserved
 
-function myFunction(){
+function dateTime(){
     var welcome;
 	var date = new Date();
     var hour = date.getHours();
@@ -10,8 +10,9 @@ function myFunction(){
     var second = date.getSeconds();
 	var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday", "Friday","Saturday");
     document.getElementById("demo").innerHTML=weekday[date.getDate()];
-    document.getElementById("demo1").innerHTML=(","+ hour +":" + minute+ ":" +second);
+    // document.getElementById("demo1").innerHTML=(","+ hour +":" + minute+ ":" +second);
 }
+ window.onload=dateTime();
 
 function ShowInput()
 {
