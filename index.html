@@ -8,13 +8,11 @@
     <title>Weather App</title>
     <meta charset = "UTF-8" />
     <!--For linking the css file to the main html part-->
-    <link rel = "stylesheet" type = "text/css"href = "weather_css.css" />
+    <link rel = "stylesheet" type = "text/css"href = "css/styles.css" />
     <!--For linking the javascript file to the main html part-->
-    <script type="text/javascript" src="weather_javascript.js"></script>
+    <script type="text/javascript" src="javascript/js_weather.js"></script>
   </head>
-  <!-- <body onload="myFunction()">
-        <h2><span id="demo"></span></h2>> -->
-     <body>
+  <body>
        <div>
            <!--For left side part of webpage-->
              <div class="left">
@@ -23,15 +21,15 @@
                </div>
         </div>
            <!--For right side part of webpage-->
-           <div class="right">
+        <div class="right">
                 Bangalore
                <div onchange="myFunction()">
                  <h2><span id="demo demo1"></span></h2>
-            </div>
+               </div>
                 <form action="action_form.php" method="get">
                     <h2 class="center">Enter your city</h2>
-                     <input type = "text" list = "mycity" name="mycity" placeholder="City,State"> 
-                         <datalist id = "mycity">
+                     <input type = "text" list = "myCity" name="myCity" placeholder="City,State"> 
+                         <datalist id = "myCity">
                         <option value = "Bangalore,Karnataka">
                         <option value = "Hyderabad,Telangana">
                         <option value = "Mumbai,Maharastra">
@@ -39,13 +37,8 @@
                         <option value = "New Delhi">
                         </datalist>
                      
-    </form>
-                  
-                   
+                  </form>        
            </div>
       </div>
-   
-
   </body>
-
 </html>
