@@ -1,0 +1,46 @@
+/* Css file to give styles in the Weather app
+   Author: Robin Hooda
+   copyrights reserved
+*/
+body{
+    font-family: "open Sans" ;
+    margin: 0px;
+}
+.left{
+
+        /* position: absolute;
+        top: 80px;
+       left: 5%;
+        right:50%
+        width: 50%;
+        height: 100px;
+        background-color:blue; */
+        background-color: peru ;
+        width: 50%;
+        height: 100vh;
+        float:left;
+        text-align: center;
+        top: 30vh;
+        justify-content: center;
+        
+    }
+
+.right{
+        /* position: absolute;
+        top: 80px;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+    background-color: aliceblue; */
+        background-color:lightblue;
+        width: 50%;
+        height: 100vh;
+        float: left;
+        text-align: center;
+        
+        
+
+}
+.center{ margin-top: 40%
+     
+}
