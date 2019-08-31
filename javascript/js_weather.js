@@ -1,6 +1,8 @@
-// javascript file for the weather App
-// Author: Robin Hooda
-// copyrights reserved
+/*  Javascript file for weather App
+    Project Name   : Weather App
+    Author         : Robin Hooda 
+    Link           : https://github.com/robinhooda/Weather_App
+ */
 
 const array = [
     {   city:'Bangalore',
@@ -11,8 +13,8 @@ const array = [
         state:'TamilNadu',
         degree :34,
         weather:'Sunny ☀️'},
-    {   city:'Coimbatore',
-        state:'TamilNadu',
+    {   city:'Chandigarh',
+        state:'Haryana',
         degree :26,
         weather:'Rainy ⛈️'},
     {   city:'Patna',

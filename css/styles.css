@@ -1,3 +1,9 @@
+/*  Css file for weather App
+    Project Name   : Weather App
+    Author         : Robin Hooda 
+    Link           : https://github.com/robinhooda/Weather_App
+ */
+
 body{
     margin: 0;
 }
@@ -47,7 +53,7 @@ body{
     font-family: sans-serif;
 }
 
-.container .content .details .condition{
+.container .content .details .weather{
     margin-top : 1%;
     display: grid;
     grid-template-columns : 1fr 1fr;
@@ -68,6 +74,9 @@ body{
     margin-top: 1%;
     font-size: .8em;
     color:#1890f0;
+    cursor: pointer;
+    
+   
 }
 
 .container .content .report .or{
@@ -79,8 +88,13 @@ body{
 .container .content .report .farenheit{
     margin-top: 1%;
     font-size: .8em;
+    cursor: pointer;
 }
 
+.container .content .report .celsius .farenheit:hover{
+    opacity: 5;
+    color:blue;
+}
 .container .content .inputDetails
 {
     font-family: sans-serif;
