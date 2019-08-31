@@ -73,7 +73,6 @@ function process(value)
             .innerHTML = arr.city+", "+arr.state;
             document.getElementsByClassName("date")[0]
             .innerHTML = dayInString+" "+hours+":"+minutes+" "+meridiem;
-            let img = " <img src='"+arr.image+"' alt'weather-icon' id='img'>"
             document.getElementsByClassName("condition")[0]
             .innerHTML = arr.weather+img;
             document.getElementsByClassName("degree")[0]
