@@ -5,7 +5,7 @@
 const array = [
     {   city:'Bangalore',
         state:'Karnataka',
-        degree :26,
+        degree :22,
         weather:'Partly Cloudy ☁️'},
     {   city:'Chennai',
         state:'TamilNadu',
@@ -34,49 +34,86 @@ const array = [
     
     
 ];
+let celsiusDetails = 22;
+let celsius = celsiusDetails;
+let farenheit;
 
-function dateTime(){
-    var welcome;
-	var date = new Date();
-    var hour = date.getHours();
-    var minute = date.getMinutes();
-    var second = date.getSeconds();
-	var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday", "Friday","Saturday");
-      let conCat=   weekday[date.getDate()]+", "(","+ hour +":" + minute+ ":" +second);
-    // document.getElementById("demo").innerHTML=weekday[date.getDate()];
-    // document.getElementById("demo").innerHTML=(","+ hour +":" + minute+ ":" +second);
-alert(date.getSeconds());
-}
- window.onload=dateTime();
 
-function ShowInput()
+
+function process(value)
 {
-    let cities = [
-        
-        { mycity: "Bangalore,Karnataka", type:"humidity",temp: 27 },
-       { mycity: "Hyderabad,Telangana", type:"humidity",temp: 22},
-       { mycity: "Mumbai,Maharastra", type:"humidity",temp: 26},
-       { mycity: "Pune,Maharastra", type:"humidity",temp: 21},
-       { mycity: "New Delhi", type:"humidity",temp: 34 },
-        
-     ]
-} 
-//     if (minute < 10) {
-//         minute = "0" + minute;
-//     }
-//     if (second < 10) {
-//         second = "0" + second;
-//     }
-//     if (hour < 12) {
-//         welcome = "Good morning";
-//     }
-//     else if (hour < 17) {
-//         welcome = "Good afternoon";
-//     }
-//     else {
-//         welcome = "Good evening";
-//     }
+    document.getElementsByClassName("celsius")[0].style.color = "#1890f0";
+    document.getElementsByClassName("farenheit")[0].style.color = "#000000"
+    console.log(value);
+    array.forEach((arr)=>{
+        if(arr.city===value)
+        {
+            let date = new Date();   
+            let dayInNumber= date.getDay();
+            let dayInString = dayInNumber==0?
+            'Sunday':dayInNumber==1?
+            'Monday':dayInNumber==2?
+            'Tuesday':dayInNumber==3?
+            'Wednesday':dayInNumber==4?
+            'Thursday':dayInNumber==5?
+            'Friday':'Saturday';
+            let hours = date.getHours()+1;
+            let meridiem = 'am'
+            if(hours > 12)
+            {
+             hours -= 13;
+             meridiem = 'pm';
+            }
+            let minutes = date.getMinutes();
+            celsiusDetails = arr.degree;
+            celsius = celsiusDetails;
+            if(minutes<10)
+            minutes = '0'+minutes;
+            document.getElementsByClassName("cityName")[0]
+            .innerHTML = arr.city+", "+arr.state;
+            document.getElementsByClassName("date")[0]
+            .innerHTML = dayInString+" "+hours+":"+minutes+" "+meridiem;
+            let img = " <img src='"+arr.image+"' alt'weather-icon' id='img'>"
+            document.getElementsByClassName("condition")[0]
+            .innerHTML = arr.weather+img;
+            document.getElementsByClassName("degree")[0]
+            .innerHTML = arr.degree;
+            console.log(img);
+        }
+    })
+}
 
-//     document.write("<h2>" + "<font color='red'>" + welcome + "</font>" + ",time is:");
-//     document.write(hour + ":" + minute + ":" + second);
-//    document.write("<br><br>"+"Today is " + weekday[date.getDay()]+"</h2>")
+var input = document.getElementById("in");
+input.addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("button1").click();
+  }
+});
+let celsiusCount = 0;
+
+function changeToFarenheit()
+{
+  document.getElementsByClassName("farenheit")[0].style.color="#1890f0";
+  document.getElementsByClassName("celsius")[0].style.color="#000000";
+  console.log(celsiusDetails);
+  if(celsiusCount < 1)
+  {
+  farenheit = Math.floor(celsius*1.8+32);
+  celsiusDetails = farenheit;
+  celsiusCount++;
+  }
+  console.log(farenheit);
+  document.getElementsByClassName("degree")[0].innerHTML = farenheit;
+}
+
+
+function changeToCelsius()
+{
+    document.getElementsByClassName("celsius")[0].style.color="#1890f0";
+    document.getElementsByClassName("farenheit")[0].style.color="#000000";
+    celsiusDetails = celsius;
+    celsiusCount--;
+    console.log(celsius);
+    document.getElementsByClassName("degree")[0].innerHTML = celsius;
+}

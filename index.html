@@ -1,66 +1,75 @@
-<!----A web application for finding the weather of a particular selected city 
-      Author: Robin Hooda
-      copyrights reserved
------->
-<!DOCTYPE HTML>
+<!--    Project Name   : Weather App
+        Languages Used : HTML5, CSS3, Javascript
+        Author         : Robin Hooda
+        Description    : A web application for showing the weather for any 
+                        particular location and option to change the Temperature
+                        from celcius to frahenhiet and vice-versa. -->
+
 <html>
-  <head>
-    <title>Weather App</title>
-    <!-- <meta charset = "UTF-8" /> -->
-    <!--For linking the css file to the main html part-->
-    <link rel = "stylesheet" type = "text/css"href = "css/styles.css" />
-    <!--For linking the javascript file to the main html part-->
-    
-  </head>
-  <body>
-       <div>
-           <!--For left side part of webpage-->
-             <div class="left">
-            <!---   <div class="center-left">-->
-                  <h1 class="center">Weather App</h1> 
-               </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Weather App" content="Cities,Weather,Celcius,Temperature"/>
+        <link rel="stylesheet" href="css/styles.css">
+        <title>
+            Weather-App Using JS
+        </title>
+    </head>
+    <body>
+    <div class="main">
+        <div class="title">
+            <h1> Weather <span>App</span></h1>
         </div>
-         
-                    <h2 class="center">Enter your city</h2> -->
-              <div class="right">
-                  <div class="cityName">Bangalore, Karnataka</div>
-                  <div class="details">
-                        <div class="date">Wednesday 1:00 pm</div>
-                        <div class="condition">Partly Cloudy ☁️ </div>
-                  </div>
-                  <div class="report">
-                      <div><b class="degree">26</b></div> <span>
-                          <span class="celsius" onclick="changeToCelsius()">&#8451;</span> 
-                          <span class="or">|</span> 
-                          <span class="farenheit" onclick="changeToFarenheit()"> &#8457;
-                          </span></span>
-                    </div>
-                <div class="inputDetails">
+        <div class = "container">
+        <div class="left">
+                  
+        </div>
+        <div class="content">
+            <div class="cityname">Bangalore,Karnataka</div>     
+            <div class="details">
+                 <div class="date">Saturday , 11:40 am</div>
+                 <div class="condition">Partly Cloudy ⛅</div>   
+            </div>
+            <div class="report">
+                    <div><b class="degree">21</b></div> 
+                    <span>
+                        <span class="celsius" onclick="changeToCelsius()">&#8451;</span> 
+                        <span class="or">|</span> 
+                        <span class="farenheit" onclick="changeToFarenheit()"> &#8457;</span>
+                    </span>
+            </div>
+        </div>
+            <div class="inputDetails">
                     <div class="placeholder">Enter city name</div>
                     <div class="input">
                         <input id="in" type="text" name="city" placeholder="City name" 
                         list="datalist">
-                        <datalist id="datalist">
-                     <input type = "text" list = "myCity" name="myCity" placeholder="City,State"> 
-                         <datalist id = "myCity">
-                        <option value = "Bangalore">
-                        <option value = "Hyderabad">
-                        <option value = "Mumbai">
-                        <option value = "Pune">
-                        <option value = "New Delhi">
-                        <option value = "Gurugram"> 
-                        <option value = "New Delhi">
-                        <option value = "Patna">
-                        <option value="Coimbatore"> 
-                        <option value="Jaipur">
-                        <option value="Mysore">
-                        </datalist>
+                        <datalist id="datalist"> 
+                            <option value="Noida"></option> 
+                            <option value="Bangalore"></option> 
+                            <option value="Chennai"></option> 
+                            <option value="Coimbatore"></option> 
+                            <option value="Jaipur"></option> 
+                            <option value="Mysore"></option> 
+                            <option value="Alleppey"></option> 
+                            <option value="Mumbai"></option> 
+                            <option value="Panaji"></option> 
+                            <option value="Amaravati"></option> 
+                            <option value="Gurugram"></option> 
+                            <option value="Patna"></option> 
+                            <option value="Madurai"></option>      
+                            <!-- This data list will be edited through javascript     -->
+                        </datalist> 
                         <button id="button1" type="submit" 
                         onclick="process(document.getElementById('in').value)">
                         </button>
-                      
-           </div>
-      </div>
-  </body>
-  <script type="text/javascript" src="javascript/js_weather.js"></script>
+                    </div>
+                </div>
+                </div>
+                <div class="right">
+                  
+                </div>
+            </div>
+        </div>
+        <script src="javascript/javascript.js" type="text/javascript"></script>
+    </body>
 </html>
