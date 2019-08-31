@@ -91,9 +91,9 @@ body{
     cursor: pointer;
 }
 
-.container .content .report .celsius .farenheit:hover{
+#ColorChange:hover{
     opacity: 5;
-    color:blue;
+    color:inherit;
 }
 .container .content .inputDetails
 {

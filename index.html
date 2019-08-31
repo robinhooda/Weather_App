@@ -10,6 +10,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="Weather App" content="Cities,Weather,Celcius,Temperature"/>
+        <meta name="Author" content="Robin Hooda"/>
         <link rel="stylesheet" href="css/styles.css">
         <title>
             Weather-App Using JS
@@ -35,7 +36,7 @@
                     <span>
                         <span class="celsius" onclick="changeToCelsius()">&#8451;</span> 
                         <span class="or">|</span> 
-                        <span class="farenheit" onclick="changeToFarenheit()"> &#8457;</span>
+                        <span class="farenheit" onclick="changeToFarenheit()"id="ChangeColor"> &#8457;</span>
                     </span>
             </div>
         
@@ -55,7 +56,7 @@
                            
                         </datalist> 
                         <button id="button1" type="submit" 
-                        onclick="process(document.getElementById('in').value)">
+                        onclick="information(document.getElementById('in').value)">
                         </button>
                     </div>
                 </div>

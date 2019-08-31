@@ -42,7 +42,7 @@ let farenheit;
 
 
 
-function process(value)
+function information(value)
 {
     document.getElementsByClassName("celsius")[0].style.color = "#1890f0";
     document.getElementsByClassName("farenheit")[0].style.color = "#000000"
@@ -76,7 +76,7 @@ function process(value)
             document.getElementsByClassName("date")[0]
             .innerHTML = dayInString+" "+hours+":"+minutes+" "+meridiem;
             document.getElementsByClassName("condition")[0]
-            .innerHTML = arr.weather+img;
+            .innerHTML = arr.weather;
             document.getElementsByClassName("degree")[0]
             .innerHTML = arr.degree;
             console.log(img);
