@@ -59,7 +59,7 @@ function information(value)
             'Wednesday':dayInNumber==4?
             'Thursday':dayInNumber==5?
             'Friday':'Saturday';
-            let hours = date.getHours()+1;
+            let hours = date.getHours();
             let meridiem = 'am'
             if(hours > 12)
             {
@@ -75,11 +75,11 @@ function information(value)
             .innerHTML = arr.city+", "+arr.state;
             document.getElementsByClassName("date")[0]
             .innerHTML = dayInString+" "+hours+":"+minutes+" "+meridiem;
-            document.getElementsByClassName("condition")[0]
+            document.getElementsByClassName("weather")[0]
             .innerHTML = arr.weather;
             document.getElementsByClassName("degree")[0]
             .innerHTML = arr.degree;
-            console.log(img);
+            
         }
     })
 }
