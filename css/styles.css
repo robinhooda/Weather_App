@@ -3,7 +3,10 @@
     Author         : Robin Hooda 
     Link           : https://github.com/robinhooda/Weather_App
  */
-
+:root{
+        --color-1:rgb(0, 204, 255);
+        --color-2:rgb(255, 255, 255);
+}
 body{
     margin: 0;
 }
@@ -17,10 +20,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1672be;
+    background-color: var(--color-1);
 }
 .container{
-    background-color: #f0f0f0;
+    background-color: var(--color-2);
     display: grid;
     grid-template-columns: 0.5fr 3fr 0.5fr;
 }
