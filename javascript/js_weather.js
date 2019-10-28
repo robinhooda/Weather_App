@@ -39,8 +39,10 @@ const array = [
 let celsiusDetails = 22;
 let celsius = celsiusDetails;
 let farenheit;
-
-
+$.ajax{{
+    
+}}
+api.openweathermap.org/data/2.5/weather?q={city name}
 
 function information(value)
 {
@@ -63,7 +65,7 @@ function information(value)
             let meridiem = 'am'
             if(hours > 12)
             {
-             hours -= 13;
+             hours -= 12;
              meridiem = 'pm';
             }
             let minutes = date.getMinutes();
